@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 4.0.0">
+<meta name="generator" content="Hexo 4.2.1">
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
@@ -51,14 +51,16 @@
 </script>
 
   <meta name="description" content="更新openssh到openssh8.1查看当前版本12[root@test]# ssh -VOpenSSH_7.4p1, OpenSSL 1.0.2k-fips 26 Jan 2017  下载解压安装包12wget https:&#x2F;&#x2F;cikeblog.com&#x2F;s&#x2F;openssh8.1.tar.gztar -zxvf openssh8.1.tar.gz  安装方式一1rpm -Uvh *.rpm">
-<meta name="keywords" content="update-ssh">
 <meta property="og:type" content="article">
 <meta property="og:title" content="update_ssh">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;19&#x2F;update-ssh&#x2F;index.html">
+<meta property="og:url" content="http://yoursite.com/2019/12/19/update-ssh/index.html">
 <meta property="og:site_name" content="好自为之">
 <meta property="og:description" content="更新openssh到openssh8.1查看当前版本12[root@test]# ssh -VOpenSSH_7.4p1, OpenSSL 1.0.2k-fips 26 Jan 2017  下载解压安装包12wget https:&#x2F;&#x2F;cikeblog.com&#x2F;s&#x2F;openssh8.1.tar.gztar -zxvf openssh8.1.tar.gz  安装方式一1rpm -Uvh *.rpm">
-<meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-12-18T12:40:53.210Z">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2019-12-18T20:20:00.000Z">
+<meta property="article:modified_time" content="2019-12-18T12:40:53.210Z">
+<meta property="article:author" content="周军伟">
+<meta property="article:tag" content="update-ssh">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="http://yoursite.com/2019/12/19/update-ssh/">
@@ -282,6 +284,9 @@
             <span class="post-nav-divider"></span>
 
             <div class="post-nav-prev post-nav-item">
+                <a href="/2019/12/30/sql-grammer/" rel="prev" title="sql_grammer">
+                  sql_grammer <i class="fa fa-chevron-right"></i>
+                </a>
             </div>
           </div>
       </footer>
@@ -320,7 +325,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#更新openssh到openssh8-1"><span class="nav-number">1.</span> <span class="nav-text">更新openssh到openssh8.1</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#查看当前版本"><span class="nav-number">1.1.</span> <span class="nav-text">查看当前版本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#下载解压安装包"><span class="nav-number">1.2.</span> <span class="nav-text">下载解压安装包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装方式一"><span class="nav-number">1.3.</span> <span class="nav-text">安装方式一</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装方式二"><span class="nav-number">1.4.</span> <span class="nav-text">安装方式二</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装后会如下提示："><span class="nav-number">1.5.</span> <span class="nav-text">安装后会如下提示：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#至此，升级完成，因为OPENSSH升级后，-etc-ssh-sshd-config会还原至默认状态，我们需要进行相应配置："><span class="nav-number">1.6.</span> <span class="nav-text">至此，升级完成，因为OPENSSH升级后，/etc/ssh/sshd_config会还原至默认状态，我们需要进行相应配置：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#并且，-etc-pam-d-sshd也文件会被覆盖，我们进行还原："><span class="nav-number">1.7.</span> <span class="nav-text">并且，/etc/pam.d/sshd也文件会被覆盖，我们进行还原：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#先清空sshd配置文件："><span class="nav-number">1.8.</span> <span class="nav-text">先清空sshd配置文件：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#再还原："><span class="nav-number">1.9.</span> <span class="nav-text">再还原：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#至此，升级完成，先别关闭终端，直接新开一个终端，连接到服务器测试。注意：如果新开终端连接的时，root密码报错，并且已经根据上面后续操作，那可能就是SElinux的问题，我们进行临时禁用："><span class="nav-number">1.10.</span> <span class="nav-text">至此，升级完成，先别关闭终端，直接新开一个终端，连接到服务器测试。注意：如果新开终端连接的时，root密码报错，并且已经根据上面后续操作，那可能就是SElinux的问题，我们进行临时禁用：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#即可正常登录，然后修改-etc-selinux-config-文件：进行永久禁用SElinux即可。"><span class="nav-number">1.11.</span> <span class="nav-text">即可正常登录，然后修改/etc/selinux/config 文件：进行永久禁用SElinux即可。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如果Centos7默认openssl版本不为OpenSSL-1-0-2k，就需要先进行升级：然后回到第一步进行安装即可。"><span class="nav-number">1.12.</span> <span class="nav-text">如果Centos7默认openssl版本不为OpenSSL 1.0.2k，就需要先进行升级：然后回到第一步进行安装即可。</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#更新openssh到openssh8-1"><span class="nav-number">1.</span> <span class="nav-text">更新openssh到openssh8.1</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#查看当前版本"><span class="nav-number">1.1.</span> <span class="nav-text">查看当前版本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#下载解压安装包"><span class="nav-number">1.2.</span> <span class="nav-text">下载解压安装包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装方式一"><span class="nav-number">1.3.</span> <span class="nav-text">安装方式一</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装方式二"><span class="nav-number">1.4.</span> <span class="nav-text">安装方式二</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装后会如下提示："><span class="nav-number">1.5.</span> <span class="nav-text">安装后会如下提示：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#至此，升级完成，因为OPENSSH升级后，-etc-ssh-sshd-config会还原至默认状态，我们需要进行相应配置："><span class="nav-number">1.6.</span> <span class="nav-text">至此，升级完成，因为OPENSSH升级后，&#x2F;etc&#x2F;ssh&#x2F;sshd_config会还原至默认状态，我们需要进行相应配置：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#并且，-etc-pam-d-sshd也文件会被覆盖，我们进行还原："><span class="nav-number">1.7.</span> <span class="nav-text">并且，&#x2F;etc&#x2F;pam.d&#x2F;sshd也文件会被覆盖，我们进行还原：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#先清空sshd配置文件："><span class="nav-number">1.8.</span> <span class="nav-text">先清空sshd配置文件：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#再还原："><span class="nav-number">1.9.</span> <span class="nav-text">再还原：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#至此，升级完成，先别关闭终端，直接新开一个终端，连接到服务器测试。注意：如果新开终端连接的时，root密码报错，并且已经根据上面后续操作，那可能就是SElinux的问题，我们进行临时禁用："><span class="nav-number">1.10.</span> <span class="nav-text">至此，升级完成，先别关闭终端，直接新开一个终端，连接到服务器测试。注意：如果新开终端连接的时，root密码报错，并且已经根据上面后续操作，那可能就是SElinux的问题，我们进行临时禁用：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#即可正常登录，然后修改-etc-selinux-config-文件：进行永久禁用SElinux即可。"><span class="nav-number">1.11.</span> <span class="nav-text">即可正常登录，然后修改&#x2F;etc&#x2F;selinux&#x2F;config 文件：进行永久禁用SElinux即可。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如果Centos7默认openssl版本不为OpenSSL-1-0-2k，就需要先进行升级：然后回到第一步进行安装即可。"><span class="nav-number">1.12.</span> <span class="nav-text">如果Centos7默认openssl版本不为OpenSSL 1.0.2k，就需要先进行升级：然后回到第一步进行安装即可。</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -336,20 +341,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-count">11</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-count">8</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-count">12</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -399,13 +404,13 @@
 <div class="copyright">
   
   &copy; 
-  <span itemprop="copyrightYear">2019</span>
+  <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">周军伟</span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v4.0.0
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v4.2.1
   </div>
   <span class="post-meta-divider">|</span>
   <div class="theme-info">主题 – <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.5.0
@@ -435,9 +440,17 @@
   <script src="/lib/anime.min.js"></script>
   <script src="/lib/velocity/velocity.min.js"></script>
   <script src="/lib/velocity/velocity.ui.min.js"></script>
-<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
 <script src="/js/schemes/pisces.js"></script>
+
+
 <script src="/js/next-boot.js"></script>
+
 
 
 

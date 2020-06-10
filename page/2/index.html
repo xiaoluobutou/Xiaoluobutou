@@ -52,27 +52,27 @@
 
   <meta property="og:type" content="website">
 <meta property="og:title" content="好自为之">
-<meta property="og:url" content="http://yoursite.com/tags/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/index.html">
+<meta property="og:url" content="http://yoursite.com/page/2/index.html">
 <meta property="og:site_name" content="好自为之">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:author" content="周军伟">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://yoursite.com/tags/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/">
+<link rel="canonical" href="http://yoursite.com/page/2/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome: false,
+    isHome: true,
     isPost: false,
     isPage: false,
     isArchive: false
   };
 </script>
 
-  <title>标签: 文件上传 | 好自为之</title>
+  <title>好自为之</title>
   
 
 
@@ -182,49 +182,82 @@
           <div class="content">
             
 
+  <div class="posts-expand">
+        
   
   
-  
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <h1 class="collection-header">文件上传
-          <small>标签</small>
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/05/bootstrap/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="周军伟">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="好自为之">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/11/05/bootstrap/" class="post-title-link" itemprop="url">bootstrap-table formatter属性</a>
         </h1>
-      </div>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2019-11-05 14:56:38 / 修改时间：07:44:25" itemprop="dateCreated datePublished" datetime="2019-11-05T14:56:38Z">2019-11-05</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    <div class="collection-year">
-      <h1 class="collection-header">2019</h1>
+          <h2 id="bootstrap-table"><a href="#bootstrap-table" class="headerlink" title="bootstrap-table"></a>bootstrap-table</h2><h3 id="返回数据处理"><a href="#返回数据处理" class="headerlink" title="返回数据处理"></a>返回数据处理</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	title: <span class="string">'缴费时间'</span>,</span><br><span class="line">	field: <span class="string">'payment_time'</span>,</span><br><span class="line">	align: <span class="string">'center'</span>,</span><br><span class="line">	formatter: <span class="function"><span class="keyword">function</span> (<span class="params">value, row, index</span>) </span>&#123; <span class="comment">//截取字符串</span></span><br><span class="line">		<span class="keyword">return</span> row.payment_time.substring(<span class="number">0</span>,<span class="number">10</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	formatter: <span class="function"><span class="keyword">function</span> (<span class="params">value, row, index</span>) </span>&#123; <span class="comment">//获取序号</span></span><br><span class="line">                    <span class="comment">//获取每页显示的数量</span></span><br><span class="line">                    <span class="keyword">var</span> pageSize=$(<span class="string">'#FAJk_table'</span>).bootstrapTable(<span class="string">'getOptions'</span>).pageSize;</span><br><span class="line">                    <span class="comment">//获取当前是第几页</span></span><br><span class="line">                    <span class="keyword">var</span> pageNumber=$(<span class="string">'#FAJk_table'</span>).bootstrapTable(<span class="string">'getOptions'</span>).pageNumber;</span><br><span class="line">                    <span class="comment">//返回序号，注意index是从0开始的，所以要加上1</span></span><br><span class="line">                    <span class="keyword">return</span> pageSize * (pageNumber - <span class="number">1</span>) + index + <span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	formatter:<span class="function"><span class="keyword">function</span>(<span class="params">value,row,index</span>)</span>&#123; <span class="comment">//返回操作按钮</span></span><br><span class="line">                    <span class="keyword">var</span> edit = <span class="string">"&lt;a class='btn btn-md'&gt;&lt;span class='glyphicon glyphicon-pencil'&gt;&lt;/span&gt;&lt;/a&gt;"</span>;</span><br><span class="line">                    <span class="keyword">var</span> del = <span class="string">"&lt;a class='btn btn-md'&gt;&lt;span class='glyphicon glyphicon-trash'&gt;&lt;/span&gt;&lt;/a&gt;"</span>;</span><br><span class="line">                    <span class="keyword">return</span> edit+del;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2019-11-06T14:53:38Z"
-              content="2019-11-06">
-          11-06
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/2019/11/06/JavaManual/" itemprop="url">
-            <span itemprop="name">上传文件</span>
-          </a>
-      </h2>
-
-    </header>
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
   </article>
+  
+  
+  
 
-    </div>
   </div>
-  
-  
-  
 
   
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+  </nav>
 
 
 
